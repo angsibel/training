@@ -22,5 +22,9 @@ class Notebook:
     def read(self, tally):
         return self.data[tally]
 
+    def read_all(self):
+        for i in self.data:
+            print(self.data[i])
+
 
 notebook1 = Notebook()
