@@ -4,8 +4,10 @@ class Notebook:
     data = {}
 
     def __init__(self, pages):
-        if self.pages > 0:
+        if pages > 0:
             self.pages = pages
+        else:
+            raise ValueError('Указано не корректное количество страниц')
 
     def open(self):
         self.property = 'Открыто'
