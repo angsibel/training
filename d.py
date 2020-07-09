@@ -4,7 +4,8 @@ class Notebook:
     data = {}
 
     def __init__(self, pages):
-        self.pages = pages
+        if self.pages > 0:
+            self.pages = pages
 
     def open(self):
         self.property = 'Открыто'
@@ -13,7 +14,7 @@ class Notebook:
         self.property = 'Закрыли'
 
     def write(self, number_pages, text):
-        if self.property == 'Открыто' and self.pages >= number_pages:
+        if self.property == 'Открыто' and self.pages >= number_pages and number_pages > 0:
             self.data[number_pages] = text
 
     def read(self, tally):
