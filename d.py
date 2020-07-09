@@ -7,7 +7,7 @@ class Notebook:
         if pages > 0:
             self.pages = pages
         else:
-            raise ValueError('Указано не корректное количество страниц')
+            raise ValueError('Указано некорректное количество страниц')
 
     def open(self):
         self.property = 'Открыто'
